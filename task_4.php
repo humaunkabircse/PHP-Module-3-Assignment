@@ -5,7 +5,7 @@
 $studentGrades = [
     [ "Math" => 95, "English" => 90, "Science" => 80 ],
     [ "Math" => 63, "English" => 67, "Science" => 80 ],
-    [ "Math" => 44, "English" => 96, "Science" => 80 ]  
+    [ "Math" => 98, "English" => 96, "Science" => 80 ]  
 ];
 
 function avarageGrade($studentGrades){
@@ -15,7 +15,24 @@ function avarageGrade($studentGrades){
             $total += $grade;
         }
         $average = $total / count($student);
-        echo $average . PHP_EOL;
+
+        if($average >= 90){
+            echo "Grade A" . PHP_EOL;
+        }
+        elseif($average >= 80){
+            echo "Grade B" . PHP_EOL;
+        }
+        elseif($average >= 70){
+            echo "Grade C" . PHP_EOL;
+        }
+        elseif($average >= 60){
+            echo "Grade D" . PHP_EOL;
+        }
+        else{
+            echo "Grade F" . PHP_EOL;
+        }
+
+
     }
 }
 avarageGrade($studentGrades);
